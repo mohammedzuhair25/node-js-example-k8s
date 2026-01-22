@@ -17,6 +17,4 @@ spec:
         path: /
         pathType: Prefix
 status:
-  loadBalancer:
-    ingress:
-    - ip: 192.168.39.16
+  loadBalancer: {}
