@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: node-app
+  name: node-app
+  namespace: node-app-dev
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: node-app
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+  template:
+    metadata:
+      labels:
+        app: node-app
+    spec:
+      containers:
+        - name: node-swagger-metrics      # name must be under the container
+          image: mzm1/node-swagger-metrics:v3
+          imagePullPolicy: Always         # also nested here
+          ports:
+            - containerPort: 3000         # optional, but recommended
+
