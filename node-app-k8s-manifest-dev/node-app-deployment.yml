@@ -21,9 +21,8 @@ spec:
         app: node-app
     spec:
       containers:
-        - name: node-swagger-metrics      # name must be under the container
-          image: mzm1/node-swagger-metrics:v3
-          imagePullPolicy: Always         # also nested here
+        - name: node-swagger-metrics # name must be under the container
+          image: mzm1/node-swagger-metrics:83902db0
+          imagePullPolicy: Always # also nested here
           ports:
-            - containerPort: 3000         # optional, but recommended
-
+            - containerPort: 3000 # optional, but recommended
