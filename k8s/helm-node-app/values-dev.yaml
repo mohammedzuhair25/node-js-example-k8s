@@ -1,0 +1,19 @@
+replicaCount: 1
+
+image:
+  repository: mzm1/node-swagger-metrics
+  tag: ee664c81
+
+service:
+  type: NodePort
+  port: 3000
+  targetPort: 3000
+
+container:
+  port: 3000
+
+env:
+  NODE_ENV: development
+
+ingress:
+  host: dev.node-app.local

@@ -1,0 +1,20 @@
+replicaCount: 1
+
+image:
+  repository: mydockerhub/node-app
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 3000
+  targetPort: 3000
+
+container:
+  port: 3000
+
+env:
+  NODE_ENV: production
+
+ingress:
+  host: node-app.local

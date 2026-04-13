@@ -4,7 +4,6 @@ metadata:
   labels:
     app: node-app
   name: node-app
-  namespace: node-app-dev
 spec:
   replicas: 2
   selector:
@@ -22,7 +21,14 @@ spec:
     spec:
       containers:
         - name: node-swagger-metrics # name must be under the container
-          image: mzm1/node-swagger-metrics:4851b14eb1fdf0d3edc748bf3fb1868618daa778
+          image: mzm1/node-swagger-metrics:ee664c81
           imagePullPolicy: Always # also nested here
           ports:
             - containerPort: 3000 # optional, but recommended
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 500m
+              memory: 512Mi
