@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
         - name: node-swagger-metrics # name must be under the container
-          image: mzm1/node-swagger-metrics:7c27188abe71e6a8073e8763476b21dd66cf3f3e
+          image: mzm1/node-swagger-metrics:421d2c1a3bf21b982f6588640d8261f47a55865a
           imagePullPolicy: Always # also nested here
           ports:
             - containerPort: 3000 # optional, but recommended
