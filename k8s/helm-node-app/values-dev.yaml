@@ -1,7 +1,7 @@
 replicaCount: 1
 image:
   repository: mzm1/node-swagger-metrics
-  tag: 2bbe4f1ed5b093dc419116b9af4ce4ac7843dc3f
+  tag: 7c1ecafc167b42e7908eb5ab743044e5d50de288
 service:
   type: NodePort
   port: 3000
