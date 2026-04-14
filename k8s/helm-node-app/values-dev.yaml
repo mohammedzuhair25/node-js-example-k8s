@@ -16,3 +16,10 @@ envFromSecrets:
 
 ingress:
   host: dev.node-app.local
+
+mysql:
+    MYSQL_USER: app-user
+    MYSQL_PASSWORD: app-password
+
+auth:
+  existingSecret: ""
