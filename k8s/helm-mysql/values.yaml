@@ -1,0 +1,30 @@
+replicaCount: 1
+
+image:
+  repository: mysql
+  tag: "8.0"
+  pullPolicy: IfNotPresent
+
+service:
+  port: 3306
+
+mysql:
+  database: appdb
+  user: appuser
+  password: apppassword
+  rootPassword: rootpassword
+
+persistence:
+  enabled: true
+  accessModes:
+    - ReadWriteMany
+  size: 5Gi
+  storageClassName: ""
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 256Mi
+  limits:
+    cpu: 500m
+    memory: 512Mi

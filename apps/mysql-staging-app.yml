@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: mysql-staging
+  namespace: argocd
+spec:
+  project: default
+
+  source:
+    repoURL: http://192.168.1.95/mohammed.zuhair/node-app-k8s.git
+    targetRevision: main
+    path: k8s/helm-mysql
+    helm:
+      releaseName: mysql-staging
+      valueFiles:
+        - values-staging.yaml
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: node-app-staging
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

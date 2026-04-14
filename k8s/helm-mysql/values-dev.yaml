@@ -1,0 +1,13 @@
+replicaCount: 1
+
+mysql:
+  database: appdb_dev
+  user: appuser
+  password: devpassword
+  rootPassword: devrootpassword
+
+persistence:
+  accessModes:
+    - ReadWriteMany
+  size: 5Gi
+  storageClassName: nfs-client

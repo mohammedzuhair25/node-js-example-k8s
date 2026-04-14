@@ -1,0 +1,13 @@
+replicaCount: 1
+
+mysql:
+  database: appdb_staging
+  user: appuser
+  password: stagingpassword
+  rootPassword: stagingrootpassword
+
+persistence:
+  accessModes:
+    - ReadWriteMany
+  size: 10Gi
+  storageClassName: nfs-client
