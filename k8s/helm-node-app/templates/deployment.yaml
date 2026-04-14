@@ -20,17 +20,11 @@ spec:
           ports:
             - containerPort: {{ .Values.container.port }}
           env:
-            {{- range $key, $value := .Values.env }}
-            - name: {{ $key }}
-              value: {{ $value | quote }}
-            {{- end }}
-          {{- if .Values.envFromSecrets }}
+            - name: NODE_ENV
+              value: {{ .Values.env.NODE_ENV | quote }}
           envFrom:
-            {{- range .Values.envFromSecrets }}
             - secretRef:
-                name: {{ . }}
-            {{- end }}
-          {{- end }}
+                name: {{ .Release.Name }}-auth
           resources:
             requests:
               cpu: 100m
