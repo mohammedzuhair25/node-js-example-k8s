@@ -11,7 +11,7 @@ spec:
     targetRevision: main
     path: k8s/helm-mysql
     helm:
-      releaseName: mysql-dev
+      releaseName: node-app-dev
       valueFiles:
         - values-dev.yaml
 
