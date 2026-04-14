@@ -1,7 +1,7 @@
 replicaCount: 1
 image:
   repository: mzm1/node-swagger-metrics
-  tag: 804a62040342e6cfcc9ac7478c312b7644fa6c73
+  tag: 72a0d24b4ae2b4e85183821b4bf2e392061d2367
 service:
   type: NodePort
   port: 3000
@@ -10,18 +10,14 @@ container:
   port: 3000
 env:
   NODE_ENV: development
-
 database:
   host: mysql-dev.mysql-dev.svc.cluster.local
   port: 3306
   name: app_db
-
 ingress:
   host: dev.node-app.local
-
 mysql:
-    MYSQL_USER: app-user
-    MYSQL_PASSWORD: app-password
-
+  MYSQL_USER: app-user
+  MYSQL_PASSWORD: app-password
 auth:
   existingSecret: ""
