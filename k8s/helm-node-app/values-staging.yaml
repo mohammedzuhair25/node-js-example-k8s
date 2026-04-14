@@ -16,7 +16,7 @@ env:
   NODE_ENV: staging
 
 database:
-  host: mysql-staging
+  host: mysql-staging.mysql-dev.svc.cluster.local
   port: 3306
   name: app_db
 
@@ -24,8 +24,8 @@ ingress:
   host: staging.node-app.local
 
 mysql:
-    MYSQL_USER: app-user
-    MYSQL_PASSWORD: app-password
+    MYSQL_USER: appuser
+    MYSQL_PASSWORD: apppassword
 
 auth:
   existingSecret: ""
