@@ -15,6 +15,10 @@ container:
 env:
   NODE_ENV: staging
 
+database:
+  host: mysql-staging
+  port: 3306
+  name: app_db
 
 ingress:
   host: staging.node-app.local

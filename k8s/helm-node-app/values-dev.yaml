@@ -11,6 +11,10 @@ container:
 env:
   NODE_ENV: development
 
+database:
+  host: mysql-dev.mysql-dev.svc.cluster.local
+  port: 3306
+  name: app_db
 
 ingress:
   host: dev.node-app.local

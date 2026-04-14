@@ -23,6 +23,8 @@ spec:
             - name: NODE_ENV
               value: {{ .Values.env.NODE_ENV | quote }}
           envFrom:
+            - configMapRef:
+                name: {{ .Release.Name }}-db-config
             - secretRef:
                 name: {{ .Release.Name }}-auth
           resources:

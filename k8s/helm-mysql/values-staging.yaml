@@ -14,7 +14,8 @@ service:
   port: 3306
 
 mysql:
-    database: node-app-db
+    host: mysql
+    database: app_db
     user: node-app-user
     password: node-app-password
     rootPassword: node-app-root-password

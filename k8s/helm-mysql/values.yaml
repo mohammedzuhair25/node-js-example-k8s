@@ -12,6 +12,7 @@ auth:
   existingSecret: ""
 
 mysql:
+  host: mysql
   database: appdb
   user: appuser
   password: apppassword

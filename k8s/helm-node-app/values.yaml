@@ -16,6 +16,12 @@ container:
 env:
   NODE_ENV: production
 
+database:
+  host: mysql
+  port: 3306
+  name: appdb
+  user: appuser
+
 envFromSecrets: []
 
 ingress:
