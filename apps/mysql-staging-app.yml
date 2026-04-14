@@ -11,13 +11,13 @@ spec:
     targetRevision: main
     path: k8s/helm-mysql
     helm:
-      releaseName: node-app-staging
+      releaseName: mysql-staging
       valueFiles:
         - values-staging.yaml
 
   destination:
     server: https://kubernetes.default.svc
-    namespace: node-app-staging
+    namespace: mysql-staging
 
   syncPolicy:
     automated:
