@@ -1,10 +1,7 @@
 replicaCount: 1
 
-mysql:
-  database: appdb_staging
-  user: appuser
-  password: stagingpassword
-  rootPassword: stagingrootpassword
+auth:
+  existingSecret: mysql-staging-auth
 
 persistence:
   accessModes:

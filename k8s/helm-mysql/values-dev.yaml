@@ -1,10 +1,7 @@
 replicaCount: 1
 
-mysql:
-  database: appdb_dev
-  user: appuser
-  password: devpassword
-  rootPassword: devrootpassword
+auth:
+  existingSecret: mysql-dev-auth
 
 persistence:
   accessModes:

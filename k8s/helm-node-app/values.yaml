@@ -16,5 +16,7 @@ container:
 env:
   NODE_ENV: production
 
+envFromSecrets: []
+
 ingress:
   host: node-app.local

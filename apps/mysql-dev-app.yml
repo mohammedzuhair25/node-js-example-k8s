@@ -11,13 +11,13 @@ spec:
     targetRevision: main
     path: k8s/helm-mysql
     helm:
-      releaseName: mysql-dev
+      releaseName: node-app-dev
       valueFiles:
         - values-dev.yaml
 
   destination:
     server: https://kubernetes.default.svc
-    namespace: node-app-dev
+    namespace: mysql-dev
 
   syncPolicy:
     automated:

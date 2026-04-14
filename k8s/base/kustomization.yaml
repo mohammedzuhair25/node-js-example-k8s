@@ -1,6 +1,0 @@
-resources:
-  - node-app-namespace.yaml
-  - node-app-deployment.yaml
-  - node-app-service.yaml
-  - node-app-ingress.yaml
-

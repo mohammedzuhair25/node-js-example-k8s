@@ -24,7 +24,7 @@ spec:
               name: mysql
           envFrom:
             - secretRef:
-                name: {{ include "mysql.fullname" . }}-auth
+                name: {{ include "mysql.authSecretName" . }}
           volumeMounts:
             - name: mysql-data
               mountPath: /var/lib/mysql

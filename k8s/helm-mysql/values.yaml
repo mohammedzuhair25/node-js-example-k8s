@@ -8,6 +8,9 @@ image:
 service:
   port: 3306
 
+auth:
+  existingSecret: ""
+
 mysql:
   database: appdb
   user: appuser

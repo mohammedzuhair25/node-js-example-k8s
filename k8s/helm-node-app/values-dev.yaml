@@ -10,5 +10,9 @@ container:
   port: 3000
 env:
   NODE_ENV: development
+
+envFromSecrets:
+  - mysql-dev-auth
+
 ingress:
   host: dev.node-app.local

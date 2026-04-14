@@ -18,3 +18,7 @@ release: {{ .Release.Name }}
 {{- define "mysql.headlessServiceName" -}}
 {{ printf "%s-headless" (include "mysql.fullname" .) }}
 {{- end }}
+
+{{- define "mysql.authSecretName" -}}
+{{- default (printf "%s-auth" (include "mysql.fullname" .)) .Values.auth.existingSecret -}}
+{{- end }}

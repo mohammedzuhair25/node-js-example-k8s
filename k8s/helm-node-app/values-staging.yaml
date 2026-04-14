@@ -15,5 +15,8 @@ container:
 env:
   NODE_ENV: staging
 
+envFromSecrets:
+  - node-app-staging-mysql
+
 ingress:
   host: staging.node-app.local
