@@ -16,7 +16,7 @@ env:
   NODE_ENV: staging
 
 envFromSecrets:
-  - node-app-staging-mysql
+     - mysql-staging-auth
 
 ingress:
   host: staging.node-app.local
