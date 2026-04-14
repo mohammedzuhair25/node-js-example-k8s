@@ -7,4 +7,4 @@ persistence:
   accessModes:
     - ReadWriteMany
   size: 5Gi
-  storageClassName: nfs-client
+  storageClassName: nfs-storage
