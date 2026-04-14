@@ -8,3 +8,13 @@ persistence:
     - ReadWriteMany
   size: 5Gi
   storageClassName: nfs-storage
+
+service:
+  type: ClusterIP
+  port: 3306
+
+mysql:
+    database: node-app-db
+    user: node-app-user
+    password: node-app-password
+    rootPassword: node-app-root-password
