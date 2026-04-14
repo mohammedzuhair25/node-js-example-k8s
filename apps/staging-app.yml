@@ -7,7 +7,7 @@ spec:
   project: default
 
   source:
-    repoURL: http://192.168.1.95/mohammed.zuhair/node-app-k8s.git
+    repoURL: https://github.com/mohammedzuhair25/node-js-example-k8s.git
     targetRevision: main
     path: k8s/helm-node-app
     helm:
