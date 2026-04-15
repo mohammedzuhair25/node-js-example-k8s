@@ -1,31 +1,23 @@
 replicaCount: 2
-
 image:
   repository: mzm1/node-swagger-metrics
-  tag: ee664c81
-
+  tag: d30782f4d42a252347b0ca2496705f7b807063b6
 service:
   type: ClusterIP
   port: 3000
   targetPort: 3000
-
 container:
   port: 3000
-
 env:
   NODE_ENV: staging
-
 database:
   host: mysql-staging.mysql-dev.svc.cluster.local
   port: 3306
   name: app_db
-
 ingress:
   host: staging.node-app.local
-
 mysql:
-    MYSQL_USER: appuser
-    MYSQL_PASSWORD: apppassword
-
+  MYSQL_USER: appuser
+  MYSQL_PASSWORD: apppassword
 auth:
   existingSecret: ""
