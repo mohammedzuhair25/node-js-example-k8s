@@ -13,6 +13,8 @@ spec:
       labels:
         app: node-app
         release: {{ .Release.Name }}
+    annotations:
+       argocd.argoproj.io/sync-wave: "2"
     spec:
       containers:
         - name: node-app

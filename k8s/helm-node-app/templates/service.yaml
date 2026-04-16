@@ -4,6 +4,8 @@ metadata:
   name: {{ include "node-app.fullname" . }}
   labels:
     {{- include "node-app.labels" . | nindent 4 }}
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
 spec:
   type: {{ .Values.service.type }}
   selector:
