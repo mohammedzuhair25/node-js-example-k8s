@@ -1,7 +1,7 @@
 namespace: flyway-staging
 image:
   repository: mzm1/flyway-migrations
-  tag: "1.0.0"
+  tag: "staging-e19d40f60f9e0c44f9f582473fc772a0d685326a"
   pullPolicy: IfNotPresent
 
 database:

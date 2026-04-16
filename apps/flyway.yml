@@ -11,13 +11,13 @@ spec:
     targetRevision: main
     path: k8s/helm-flyway
     helm:
-      releaseName: flyway-dev
+      releaseName: flyway-staging
       valueFiles:
-        - values-dev.yaml
+        - values-staging.yaml
 
   destination:
     server: https://kubernetes.default.svc
-    namespace: flyway-dev
+    namespace: flyway-staging
 
   syncPolicy:
     automated:
