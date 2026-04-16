@@ -8,8 +8,8 @@ database:
   host: mysql-dev.mysql-dev.svc.cluster.local
   port: 3306
   name: app_db
-  user: appuser
-  password: "rootpassword"
+  user: root
+  password: "node-app-root-password"
 
 secret:
   name: mysql-secret
