@@ -1,7 +1,7 @@
 replicaCount: 2
 image:
   repository: mzm1/node-swagger-metrics
-  tag: d30782f4d42a252347b0ca2496705f7b807063b6
+  tag: 098bfb24f53663fcf690556134a01dc17e2bd0b1
 service:
   type: ClusterIP
   port: 3000
