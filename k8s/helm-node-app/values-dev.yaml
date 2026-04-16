@@ -2,6 +2,7 @@ replicaCount: 1
 image:
   repository: mzm1/node-swagger-metrics
   tag: 03a13466a0fabf505c27e1dcd7e89812a9127aa1
+  pullPolicy: IfNotPresent
 service:
   type: NodePort
   port: 3000
@@ -21,3 +22,17 @@ mysql:
   MYSQL_PASSWORD: apppassword
 auth:
   existingSecret: ""
+probes:
+  liveness:
+    path: /livez
+    initialDelaySeconds: 30
+    periodSeconds: 10
+    timeoutSeconds: 5
+    failureThreshold: 3
+  readiness:
+    path: /readyz
+    initialDelaySeconds: 10
+    periodSeconds: 5
+    timeoutSeconds: 3
+    failureThreshold: 3
+
