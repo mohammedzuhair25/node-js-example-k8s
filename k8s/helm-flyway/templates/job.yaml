@@ -21,7 +21,7 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           args:
             - migrate
-            - -url=jdbc:mysql://{{ .Values.database.host }}:{{ .Values.database.port }}/{{ .Values.database.name }}
+            - -url=jdbc:mysql://{{ .Values.database.host }}:{{ .Values.database.port }}/{{ .Values.database.name }}?allowPublicKeyRetrieval=true
             - -user={{ .Values.database.user }}
             - -password=$(DB_PASSWORD)
           env:
