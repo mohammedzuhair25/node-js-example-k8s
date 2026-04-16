@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ .Release.Name }}
+  annotations:
+    argocd.argoproj.io/sync-wave: '2'
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
@@ -13,8 +15,6 @@ spec:
       labels:
         app: node-app
         release: {{ .Release.Name }}
-    annotations:
-       argocd.argoproj.io/sync-wave: "2"
     spec:
       containers:
         - name: node-app
