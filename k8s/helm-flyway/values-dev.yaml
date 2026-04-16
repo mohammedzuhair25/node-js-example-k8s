@@ -1,0 +1,20 @@
+namespace: flyway-dev
+image:
+  repository: mzm1/flyway-migrations
+  tag: "1.0.0"
+  pullPolicy: IfNotPresent
+
+database:
+  host: mysql-dev.mysql-dev.svc.cluster.local
+  port: 3306
+  name: app_db
+  user: appuser
+
+secret:
+  name: mysql-secret
+  passwordKey: password
+
+job:
+  name: flyway-migration-dev
+  restartPolicy: Never
+  backoffLimit: 3
