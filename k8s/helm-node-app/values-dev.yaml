@@ -1,7 +1,7 @@
 replicaCount: 1
 image:
   repository: mzm1/node-swagger-metrics
-  tag: 03a13466a0fabf505c27e1dcd7e89812a9127aa1
+  tag: 511fc5333589218aae8ad058b9ccb43ad07ef89a
 service:
   type: NodePort
   port: 3000
@@ -34,7 +34,6 @@ probes:
     periodSeconds: 5
     timeoutSeconds: 3
     failureThreshold: 3
-
 resourceQuota:
   requests:
     cpu: "1"
@@ -43,4 +42,3 @@ resourceQuota:
     cpu: "2"
     memory: "2Gi"
   pods: "10"
-
