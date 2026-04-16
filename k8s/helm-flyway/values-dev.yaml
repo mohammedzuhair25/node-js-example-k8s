@@ -9,6 +9,7 @@ database:
   port: 3306
   name: app_db
   user: appuser
+  password: "rootpassword"
 
 secret:
   name: mysql-secret
