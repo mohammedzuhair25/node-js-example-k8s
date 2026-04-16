@@ -19,3 +19,12 @@ job:
   name: flyway-migration
   restartPolicy: Never
   backoffLimit: 3
+
+resourceQuota:
+  requests:
+    cpu: "500m"
+    memory: "512Mi"
+  limits:
+    cpu: "1"
+    memory: "1Gi"
+  pods: "10"

@@ -18,3 +18,12 @@ mysql:
     user: appuser
     password: apppassword
     rootPassword: node-app-root-password
+
+resourceQuota:
+  requests:
+    cpu: "1"
+    memory: "2Gi"
+  limits:
+    cpu: "2"
+    memory: "4Gi"
+  pods: "10"

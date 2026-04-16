@@ -34,3 +34,12 @@ probes:
     periodSeconds: 5
     timeoutSeconds: 3
     failureThreshold: 3
+
+resourceQuota:
+  requests:
+    cpu: "2"
+    memory: "2Gi"
+  limits:
+    cpu: "4"
+    memory: "4Gi"
+  pods: "15"
