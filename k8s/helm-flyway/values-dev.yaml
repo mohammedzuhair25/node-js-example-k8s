@@ -1,7 +1,7 @@
 namespace: flyway-dev
 image:
   repository: mzm1/flyway-migrations
-  tag: "1.0.0"
+  tag: "dev-a05461befe6626ee256db9b73f3e333bd4053ac5"
   pullPolicy: IfNotPresent
 
 database:
