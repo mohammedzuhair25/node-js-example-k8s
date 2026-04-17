@@ -11,7 +11,7 @@ container:
 env:
   NODE_ENV: staging
 database:
-  host: mysql-staging.mysql-dev.svc.cluster.local
+  host: mysql-staging.mysql-staging.svc.cluster.local
   port: 3306
   name: app_db
 ingress:
