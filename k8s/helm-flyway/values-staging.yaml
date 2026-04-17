@@ -1,26 +1,21 @@
 namespace: flyway-staging
 image:
   repository: mzm1/flyway-migrations
-  tag: "staging-e19d40f60f9e0c44f9f582473fc772a0d685326a"
+  tag: "7809903b1eaa77e1eab7159e32c51adbdf2a039b"
   pullPolicy: IfNotPresent
-
 database:
   host: mysql-staging.mysql-staging.svc.cluster.local
   port: 3306
   name: app_db
   user: root
   password: "node-app-root-password"
-
-
 secret:
   name: mysql-secret
   passwordKey: password
-
 job:
   name: flyway-migration-staging
   restartPolicy: Never
   backoffLimit: 3
-
 resourceQuota:
   requests:
     cpu: "500m"
