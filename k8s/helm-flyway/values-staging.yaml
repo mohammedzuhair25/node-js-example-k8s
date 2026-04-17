@@ -1,7 +1,7 @@
 namespace: flyway-staging
 image:
   repository: mzm1/flyway-migrations
-  tag: "7809903b1eaa77e1eab7159e32c51adbdf2a039b"
+  tag: "6ceba6087d02eff75715a1e45bb2440ca362bbed"
   pullPolicy: IfNotPresent
 database:
   host: mysql-staging.mysql-staging.svc.cluster.local
